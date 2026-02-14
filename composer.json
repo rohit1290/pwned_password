@@ -1,0 +1,18 @@
+{
+	"name": "pwned_password",
+	"description": "Check if the user's password exists in a database of breached passwords during login and password changes, and prompt them to use a stronger password if it does",
+	"homepage": "http://www.campuskarma.in/",
+	"type": "elgg-plugin",
+	"keywords": ["elgg", "plugin", "security"],
+	"license": "Private Use",
+	"support": {
+		"source": "https://github.com/rohit1290/pwned_password",
+		"issues": "https://github.com/rohit1290/pwned_password/issues"
+	},
+	"conflict": {
+		"elgg/elgg": "<6.0"
+	},
+  "require": {
+      "dragonbe/hibp": "^0.1.1"
+  }
+}

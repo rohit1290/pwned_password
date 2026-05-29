@@ -10,10 +10,10 @@ return [
 	'events' => [
 		'action:validate' => [
 			'login' => [
-				'Pwned\Passwords\Checker' => [],
+				'Pwned\Password\Checker' => [],
 			],
 			'user/changepassword' => [
-				'Pwned\Passwords\Checker' => [],
+				'Pwned\Password\Checker' => [],
 			],
 		],
 	],

@@ -1,5 +1,5 @@
 {
-	"name": "pwned_password",
+	"name": "rohit1290/pwned_password",
 	"description": "Check if the user's password exists in a database of breached passwords during login and password changes, and prompt them to use a stronger password if it does",
 	"homepage": "http://www.campuskarma.in/",
 	"type": "elgg-plugin",

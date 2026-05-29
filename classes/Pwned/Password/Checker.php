@@ -1,28 +1,25 @@
 <?php
 
-namespace Pwned\Passwords;
-
-use Elgg\Event;
-use Dragonbe\Hibp\HibpFactory;
+namespace Pwned\Password;
 
 class Checker {
 
-	public function __invoke(Event $event): void {
+	public function __invoke(\Elgg\Event $event): void {
     
     $password = get_input('password1', null, false);
     if (!$password) {
       $password = get_input('password', null, false);
     }
-		error_log("Password: $password");
+		// error_log("Password: $password");
     if (!$password) {
       return; // nothing to check
     }
             
-    $hibp = HibpFactory::create();
+    $hibp = \Dragonbe\Hibp\HibpFactory::create();
     $isPwned = $hibp->isPwnedPassword($password);
     if ($isPwned) {
       $count = $hibp->count();
-      elgg_error_response("Your current password has appeared in data breaches ($count times). Please choose a stronger password.");
+      elgg_error_response(elgg_echo("pwned:usermessage", [$count]));
     }
     return;
 	}
